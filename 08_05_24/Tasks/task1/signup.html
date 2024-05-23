@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp-Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      form {
+        text-align: center;
+        width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background-color: #2f50c7;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #23126d;
+          }
+
+      p {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      a {
+        color: #e6210b;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #f91a01;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="index.html"  id="signup-form">
+
+        <h2>SignUp here !</h2>
+      <input
+        type="text"
+        name="username"
+        placeholder="Username"
+        pattern="[a-zA-Z0-9]+"
+        title="Please use only letters and numbers"
+        required
+      /><br /><br />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+      /><br /><br />
+
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        pattern="[0-9]{10}"
+        title="Please enter a valid 10-digit phone number"
+        required
+      /><br /><br />
+
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        pattern=".{6,}"
+        title="Password must be at least 6 characters long"
+        required
+      /><br /><br />
+
+      <input
+        type="password"
+        name="confirm_password"
+        placeholder="Confirm Password"
+        pattern=".{6,}"
+        title="Password must be at least 6 characters long"
+        required
+      /><br /><br />
+
+      <input type="submit" value="SignUp" /><br /><br />
+
+      <p>Already have an account! <a href="index.html">Login</a></p>
+    </form>
+  </body>
+</html>

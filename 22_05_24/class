@@ -1,0 +1,13 @@
+============
+
+FLEX----
+
+**flexbox
+
+** Display: flex;
+** flex-direction: column; or column-reverse; or row-reverse; or row;
+** gap:column-gap, row-gap 
+** Flex-wrap: wrap; or no-wrap; or wrap-reverse;
+** Flex-flow : flex-direction Wrap ;
+** Justify-content : center; flex-start; flex-end; space-between ; space-around ; space-evenly; 
+

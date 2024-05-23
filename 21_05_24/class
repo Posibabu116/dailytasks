@@ -1,0 +1,37 @@
+ 
+ =======
+
+ ==== CSS ATTRIBUTE SELECTORS
+
+    ----- [attribute]
+
+    ----- [attribute = "value"]
+
+    ----- CSS [attribute$="value"] Selector
+
+    ----- CSS [attribute*="value"] Selector
+
+    ----- CSS [attribute$="value"] Selector
+
+    ----- CSS [attribute^="value"] Selector
+
+    ----- CSS [attribute|="value"] Selector
+
+    ----- CSS [attribute~="value"] Selector
+
+    ----- CSS [attribute="value"] Selector
+
+    ----- CSS [attribute] Selector
+
+
+
+ ==== CSS COLOR GRADIENTS
+
+     --------liniear-Gradient
+
+     -------- Repeating-liniear-Gradient
+
+
+     ******** radial-Gradient
+
+     

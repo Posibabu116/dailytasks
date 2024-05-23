@@ -1,0 +1,212 @@
+make a registration form containing more then 20 inputs
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+
+        body{
+            background-color: rgb(48, 46, 46);
+        }
+
+        .main{
+            margin: 0 auto;
+            width: 600px;
+            text-align: center;
+            
+        }
+        fieldset{
+            border-color: darkgoldenrod;
+            background-color: azure;
+            
+        }
+        .nSection input{
+
+            text-align: center;
+            width: 50%;
+            height: 5vh;
+            margin: 1%;
+            border-radius:30px ;
+        }
+        #Phnum{
+            text-align: center;
+            width: 38%;
+            height: 5vh;
+          
+            border-radius:  0px 30px 30px 0px;
+        }
+        
+        #CC{
+            text-align: center;
+            width: 11%;
+            height: 5vh;
+            border: 2px solid;
+            padding: 5px;
+            border-radius:   30px 0px 0px 30px ;
+        }
+        #email, #Gaurdian, #blood{
+            border: 2px solid;
+            text-align: center;
+            width: 50%;
+            height: 5vh;
+            margin: 1%;
+            border-radius:30px ;
+        }
+        #blood{
+            height: 34px;
+            padding: 0 5px 0 5px;
+        }
+        
+        #Dob{
+            text-align: center;
+            width: 50%;
+            height: 5vh;
+            margin: 1%;
+            border-radius:30px ;
+        }
+
+        #Qualification{
+            border: 2px solid;
+            text-align: center;
+            width: 50%;
+            height: 5vh;
+            margin: 1%;
+            border-radius:30px ;
+        }
+
+        .EduDet{
+            text-align: center;
+            width: 50%;
+            height: 5vh;
+            margin: 1%;
+            border-radius:30px ;
+        }
+
+        #submit{
+            text-align: center;
+            width: 50%;
+            height: 5vh;
+            margin: 1%;
+            border-radius:30px ;
+            background-color: rgb(111, 111, 243);
+        }
+
+        #pass1,#pass{
+            text-align: center;
+            width: 50%;
+            height: 5vh;
+            margin: 1%;
+            border-radius:30px ;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+    
+        <fieldset>
+
+            <h2>Register here !</h2>
+            
+        <div class="form">
+            <section class="nSection">
+                <h4>Your Name Details</h4>
+                <input type="text"  id="Fname" name="yourFName" required placeholder="Your First Name">
+                <input type="text"  id="Mname" name="yourMName"  placeholder="Your Middle Name">
+                <input type="text"  id="Lname" name="yourLName" required placeholder="Your Last Name">
+            </section>
+            <hr>
+
+            <h4>Your Contact Details</h4>
+
+            <select name="country" id="CC">
+                <option value="Select">Select</option>
+                <option value="india">+91</option>
+                <option value="usa">+1</option>
+                <option value="vkhdw">+44</option>
+                <option value="uwbx">+32</option>
+                <option value="siuqw">+62</option>
+                <option value="sectionu">+72</option>
+                <option value="iufge">+81</option>
+                <option value="hcui">+2</option>
+                <option value="hiu">+34</option>
+                <option value="qwod">+67</option>
+            </select>
+            <input type="tel"  id="Phnum" name="yourNumber"  placeholder="Enter Your Phone" pattern="[0-9]{10}"> 
+            <input type="email" id="email" name="email" placeholder="Enter your Email"> 
+            <hr>
+
+            <h4>Your Personal Details</h4>
+            <input type="date" id="Dob">
+
+            <input type="text" id="Gaurdian" placeholder="Enter your Gaurdian Name">
+
+            <select name="Blood" id="blood">
+                <option value="Select">Select Your Blood Goup</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select><br><br>
+            <span>GENDER :</span>
+            <input type="radio" id="gen1" name="gender">
+            <label for="gen1">Male</label>
+            <input type="radio" id="gen2" name="gender">
+            <label for="gen2">Female</label>
+            <input type="radio" id="gen3" name="gender">
+            <label for="gen3">Others</label>
+
+            <hr>
+            <h4>Your Educational Details</h4>
+
+            <select name="edu" id="Qualification">
+                <option value="">Select your Study</option>
+                <option value="">10Th</option>
+                <option value="">12TH</option>
+                <option value="">DIPLOMA</option>
+                <option value="">B.TECH</option>
+                <option value="">DEGREE</option>
+                <option value="">M.TEch</option>
+                <option value="">PG</option>
+                <option value="">M.SC</option>
+                <option value="">P.hD</option>
+            </select>
+            <input class="EduDet" type="text" placeholder="Enter Your Stream">
+            <input class="EduDet" type="text" placeholder="Enter Your University Name">
+            <input class="EduDet" type="text" placeholder="Enter Your College Name">
+            <input class="EduDet" type="number" placeholder="Percentage You Got">
+            <hr>
+
+            <input type="password" id="pass" placeholder="Create Your password">
+            <input type="password" id="pass1" placeholder="RE-Enter your Password"><br><br>
+
+
+            <input type="checkbox" id="check"> <span>I Agree <a href="">Terms & Conditions</a></span><br><br>
+
+          
+
+
+
+            <input type="submit" id="submit">
+
+
+        
+
+        </div>
+        </fieldset>
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+----how to show some symbols by NDt names and hexdecimal values
+
+>  --&gt
+<  --&lt
+space --- &nbsp
+
+
+git and github
+
+
+ -----> create a github acc
+ -----> create a repository
+ -----> install git for widows
+ -----> in repository add readme file, public repository
+ -----> in local, create one separate folder for git tasks
+ -----> in that folder open git bash and by using git clone repo url clone the repo to the local 
+ -----> 
+ -----> clone the code 
+ -----> move the files to local repository 
+ -----> by using commands like add, commit, push etc..

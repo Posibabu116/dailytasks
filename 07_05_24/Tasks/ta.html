@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form id="productForm">
+        <label for="productBrand">Brand Name:</label>
+        <select id="productBrand" name="productBrand" required>
+          <option value="Select">Select Brand</option>
+          <option value="Nike">Nike</option>
+          <option value="Adidas">Adidas</option>
+          <option value="Puma">Puma</option>
+        </select><br>
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br>
+        <label for="productDescription">Product Description:</label>
+        <input type="text" id="productDescription" name="productDescription" required><br>
+        <label for="productPrice">Product Price:</label>
+        <input type="number" id="productPrice" name="productPrice" required><br>
+        <label>Gender:</label><br>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="unisex">Unisex</label>
+        <input type="radio" id="unisex" name="gender" value="Unisex" required><br>
+        <label for="productCategory">Product Category:</label>
+        <select class="productCategory" id="productCategory" name="productCategory" required>
+          <option value="Select">Select Category</option>
+          <option value="Shoes">Shoes</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Accessories">Accessories</option>
+        </select><br>
+        <label for="productSubcategory">Product Subcategory:</label>
+        <select id="productSubcategory" name="productSubcategory" required>
+          <option value="Select">Select Sub-Category</option>
+          <option value="Running Shoes">Running Shoes</option>
+          <option value="T-shirts">T-shirts</option>
+          <option value="Watches">Watches</option>
+        </select><br>
+        <label for="productSize">Sizes:</label><br>
+        <input type="checkbox" id="sizeS" name="productSize" value="S">
+        <label for="sizeS">S</label>
+        <input type="checkbox" id="sizeM" name="productSize" value="M">
+        <label for="sizeM">M</label><br>
+        <input type="checkbox" id="sizeL" name="productSize" value="L">
+        <label for="sizeL">L</label>
+        <input type="checkbox" id="sizeXL" name="productSize" value="XL">
+        <label for="sizeXL">XL</label>
+        <label for="productDiscount">Product Discount:</label>
+        <input type="number" id="productDiscount" name="productDiscount"><br>
+        <label for="productImage">Product Image:</label>
+        <input type="file" id="productImage" name="productImage"><br>
+        <button type="button" id="saveBtn">Save</button>
+        <button type="button" id="cancelBtn">Cancel</button>
+      </form>
+</body>
+</html>

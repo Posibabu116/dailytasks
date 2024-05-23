@@ -1,16 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <style>
+        main{
+            width: 100%;
+            text-align: center;
+        }
+      header {
+        width: 100%;
+        height: 15vh;
+        text-align: center;
+        background-color: antiquewhite;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+      section{
+        width: 98%;
+        position: absolute;
+        top: 18vh;
+      }
 
-    <h1>
-        <a href="./03_05_24/task_1.html">day 1 task 1 - some practic</a><br>
-        <a href="./03_05_24/Class.html">task 2</a>
-    </h1>
-    
-</body>
+      section{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-evenly;
+       align-items: center;
+       text-align: center;
+      }
+
+      section div:nth-child(odd) {
+      
+        width: 200px;
+        height: 200px;
+        margin-left: 0 auto;
+       margin-bottom:6% ;
+        background-color: rgb(182, 246, 196);
+        border-radius: 10% 10% 10% 10%;
+        box-shadow: 2vh 2vh 20vh;
+        overflow-y: scroll;
+      }
+      section div:nth-child(even) {
+        border: 2px solid rgb(238, 7, 7);
+       
+        width: 200px;
+        height: 200px;
+        margin-bottom:6% ;
+        background-color: rgb(246, 182, 182);
+        border-radius: 10% 10% 10% 10%;
+        box-shadow: 2vh 2vh 15vh;
+        overflow-y: scroll;
+      }
+      div h1{
+        position: sticky;
+      }
+      ::-webkit-scrollbar{
+        width: 0;
+      }
+      footer{
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+        bottom: 0;
+        background-color: rgb(235, 250, 215);
+      }
+
+      a{
+        text-decoration: none;
+        color: blueviolet;
+      }
+      
+      ul li{
+        list-style: none;
+        padding: 2%;
+
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><h2>MY PRACTICES FRONT_END</h2></header>
+      <section>
+        <div>
+          <h1>Day-1 <hr>
+         
+          <ul>
+             <li><a href="./03_05_24/task_1.html">DAY1-Task1</a></li>
+          </ul>
+
+        </div>
+
+        <div>
+          <h1>day2 <hr>
+          <ul>
+            <li><a href="./04-05-24/Tasks/task1.html">DAY2-Task1</a></li>
+            <li><a href="./04-05-24/Tasks/task2.html">DAY2-Task2</a></li>
+            <li><a href="./04-05-24/Tasks/task3.html">DAY2-Task3</a></li>
+        </ul>
+        </div>
+
+        <div>
+          <h1>day3 <hr>
+          <ul>
+            <li><a href="./06_05_24/tasks/task1.html">DAY3-Task1</a></li>
+            <li><a href="./06_05_24/tasks/task2.html">DAY3-Task2</a></li>
+            <li><a href="./06_05_24/tasks/task3.html">DAY3-Task3</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h1>day4 <hr>
+          <ul>
+            <li><a href="./07_05_24/Tasks/task-1.html">DAY4-Task1</a></li>
+            <li><a href="./07_05_24/Tasks/ta.html">DAY4-Task2</a></li>
+
+          </ul>
+        </div>
+
+        <div>
+          <h1>day5 <hr>
+          <ul>
+            <li><a href="./08_05_24/Tasks/task1/index.html">DAY5-Task1</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1>day6 <hr>
+          <ul>
+            <li><a href="./09_05_24/tasks/task1.html">DAY6-Task1</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1>day7 <hr>
+          <ul>
+            <li><a href="./10_05_24/Tasks/task.html">DAY7-Task1</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1>day8 <hr>
+          <ul>
+            <li><a href="./14_05_24/task1/task.html">DAY8-Task1</a></li>
+            <li><a href="./14_05_24/task1/task2.html">DAY8-Task2</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1>day9 <hr>
+          <ul>
+            <li><a href="./15_04_24/tasks/task1.html">DAY9-Task1</a></li>
+            <li><a href="./15_04_24/tasks/task2.html">DAY9-Task2</a></li>
+            <li><a href="./15_04_24/tasks/task3.html">DAY9-Task3</a></li>
+            <li><a href="./15_04_24/tasks/task4.html">DAY9-Task4</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1>day10 <hr>
+          <ul>
+            <li><a href="./16_05_24/task.html">DAY10-Task1</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1>day11 <hr>
+          <ul>
+            <li><a href="./17_05_24/TaSks/task1.html">DAY11-Task1</a></li>
+            <li><a href="./17_05_24/TaSks/task2.html">DAY11-Task2</a></li>
+
+          </ul>
+        </div>
+        <div>
+          <h1>day12 <hr>
+           <ul>
+            <li><a href="./18_05_24/tasks/task1.html">DAY12-Task1</a></li>
+            <li><a href="./18_05_24/tasks/task2.html">DAY12-Task2</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1>day13 <hr>
+           <ul>
+            <li><a href="./20_05_24/TAsks.html/task1/index.html">DAY13-Task1</a></li>
+          </ul>
+        </div>
+        <div>
+        <h1>day14 <hr>
+        <ul>
+         <li><a href="./21_05_24/tasks/task1/task1.html">DAY14-Task1</a></li>
+       </ul>
+     </div>
+     <div>
+     <h1>day15 <hr>
+     <ul>
+      <li><a href="./21_05_24/tasks/task1/task1.html">DAY15-Task1</a></li>
+    </ul>
+  </div>
+      </section>
+      <footer>
+        <h3>THE DAILY TASKS BY POSIBABU YALLA</h3>
+      </footer>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,39 @@
+===  Tables
+
+----------------Table tag
+---------------- th
+---------------- tr
+---------------- td
+
+*********colspan
+
+*********rowspan
+
+********cellspacing
+
+********cellpadding
+
+==== bdo tag {bi-directional override} 
+
+******* dir attribute {rtl, ltr}
+
+=== favicon
+
+===meta tags
+
+***** UTF-8 == enchodes the charecters as ASCII  {Unicode Transformation Format 8}
+
+**** viewports 
+
+**** content = width-device-width
+
+**** initial-scale = 1.0
+
+
+=|=|=|=|=|=|= TASKS =|=|=|=|=
+
+---- Reaserch topic Forms 
+
+----------------caliculator 
+
+----------------Image Gallery

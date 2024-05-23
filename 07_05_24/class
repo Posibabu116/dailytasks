@@ -1,0 +1,40 @@
+=== FORMS
+
+=== Input tags  (type attribute)
+
+text,----
+ number,----
+  email,-------
+   password, ----
+      submit,------------  
+       radio, -----
+       checkbox, 
+       tel,
+        date, 
+        file,
+         range,
+          button,
+           date&time, 
+           reset, 
+           color
+
+=== attributes --- pattern,
+                   readonly,
+                   name,
+                   disable, 
+                   size, 
+                   value , 
+                   placeholder, 
+                   checked, 
+                   multiple, 
+                   accept,
+                   method
+
+=== fieldsettag, legendtag                   
+
+=== text area
+
+=== select tag, option tag
+
+=== 
+

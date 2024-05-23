@@ -1,0 +1,9 @@
+
+
+=======Box Model
+
+******** a default box type structure made by browser it self 
+
+****** it contains   ----------content    ----------padding    ----------border     ----------margin
+
+visibility : hidden ;     display: none;
