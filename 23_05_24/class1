@@ -1,0 +1,38 @@
+
+=== flex-item properties
+
+** order  -> default value is 0   ==> based on the order value they shifts there places
+
+** flex-grow  -> it is used to grow the size of the flex box => to cover the extraspace by an element
+
+** flex-shrink  -> it is used to stop the shrink of item with in the space. 
+
+** flex-basis -> it is used to appliy the initial size to the item.
+
+** flex (Short-hand -property) -> flex-grow  + flex-shrink + flex-basis.
+
+** align-self -> to make the element self alignment by overiding the alingn item -property
+
+** 
+
+===== media Querie FLEX----
+
+@media screen and (max-width: 400px){
+
+}
+
+@media screen and (min-width: 400px){
+
+    
+
+}
+
+ used to get the more responsive :-property
+
+
+==== Opacity
+
+it is used to controll the tranceperency to the item
+
+==== filter
+
