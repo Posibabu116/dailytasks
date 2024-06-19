@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Programs</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Programs</h1>
+
+    <h2>
+      1. Program to find the sum of all even numbers in an array using a for
+      loop
+    </h2>
+    <pre><code>
+let arr = [1, 2, 3, 4, 5, 6];
+let sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+        sum += arr[i];
+    }
+}
+
+console.log("Sum of all even numbers: " + sum);
+    </code></pre>
+    <p><strong>Output:</strong></p>
+    <pre><code>
+Sum of all even numbers: 12
+    </code></pre>
+
+    <h2>
+      2. Using a do-while loop to print numbers from 1 to 10, but not equal to 5
+    </h2>
+    <pre><code>
+function printNumbers() {
+    let num = 1;
+    do {
+        if (num !== 5) {
+            console.log(num);
+        }
+        num++;
+    } while (num <= 10);
+}
+
+printNumbers();
+    </code></pre>
+    <p><strong>Output:</strong></p>
+    <pre><code>
+1
+2
+3
+4
+6
+7
+8
+9
+10
+    </code></pre>
+
+    <h2>3. Check whether the given input string is a palindrome or not</h2>
+    <pre><code>
+function isPalindrome(str) {
+    let reversedStr = str.split('').reverse().join('');
+    if (str === reversedStr) {
+        console.log(str + " is a palindrome");
+    } else {
+        console.log(str + " is not a palindrome");
+    }
+}
+
+isPalindrome("mom");
+isPalindrome("father");
+    </code></pre>
+    <p><strong>Output:</strong></p>
+    <pre><code>
+mom is a palindrome
+father is not a palindrome
+    </code></pre>
+
+    <h2>
+      4. Using a do-while loop to print numbers from 10 to 1, but only if the
+      number is odd
+    </h2>
+    <pre><code>
+let num = 10;
+
+do {
+    if (num % 2 === 0) {
+        console.log("Skipping even number");
+    } else {
+        console.log(num);
+    }
+    num--;
+} while (num >= 1);
+    </code></pre>
+    <p><strong>Output:</strong></p>
+    <pre><code>
+Skipping even number
+9
+Skipping even number
+7
+Skipping even number
+5
+Skipping even number
+3
+Skipping even number
+1
+    </code></pre>
+
+    <h2>
+      5. Using a while loop to find the average of all numbers in an array
+    </h2>
+    <pre><code>
+let arr = [1, 2, 3, 4, 5, 6];
+let sum = 0;
+let i = 0;
+
+while (i < arr.length) {
+    sum += arr[i];
+    i++;
+}
+
+let average = sum / arr.length;
+console.log("Average: " + average);
+
+if (average > 50) {
+    console.log("Average is large");
+}
+    </code></pre>
+    <p><strong>Output:</strong></p>
+    <pre><code>
+Average: 3.5
+    </code></pre>
+
+    <h2>6. Printing pattern using nested loops</h2>
+    <pre><code>
+        for (let i = 1; i <= 5; i++) {
+            let stars = '';
+            
+            if (i === 1) {
+              stars = '*';
+            } else if (i === 2) {
+              stars = '**';
+            } else if (i === 3) {
+              stars = '*';
+            } else if (i === 4) {
+              stars = '**';
+            } else if (i === 5) {
+              stars = '***';
+            }
+          
+            console.log(stars);
+          }
+    </code></pre>
+    <p><strong>Output:</strong></p>
+    <pre><code>
+*
+**
+*
+**
+***
+
+    </code></pre>
+  </body>
+</html>

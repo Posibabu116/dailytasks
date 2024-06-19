@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            background: #eef;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #eef;
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Data Types</h1>
+        <p>JavaScript provides different data types to hold different types of values. Here are the main data types:</p>
+
+        <h2>Number</h2>
+        <p>A number is used to represent numeric values. JavaScript has only one type of number, which can be written with or without decimals.</p>
+        <pre><code>// Example of a number
+let age = 25;
+let pi = 3.14;
+console.log(age); // Output: 25
+console.log(pi); // Output: 3.14</code></pre>
+
+        <h2>Null</h2>
+        <p>Null is a special value that represents "no value" or "nothing".</p>
+        <pre><code>// Example of null
+let emptyValue = null;
+console.log(emptyValue); // Output: null</code></pre>
+
+        <h2>String</h2>
+        <p>A string is a sequence of characters used to represent text.</p>
+        <pre><code>// Example of a string
+let name = "John Doe";
+console.log(name); // Output: John Doe</code></pre>
+
+        <h2>BigInt</h2>
+        <p>BigInt is a special numeric type that provides support for integers of arbitrary length.</p>
+        <pre><code>// Example of BigInt
+let bigNumber = 1234567890123456789012345678901234567890n;
+console.log(bigNumber); // Output: 1234567890123456789012345678901234567890n</code></pre>
+
+        <h2>Boolean</h2>
+        <p>A boolean represents one of two values: true or false.</p>
+        <pre><code>// Example of boolean
+let isStudent = true;
+let hasGraduated = false;
+console.log(isStudent); // Output: true
+console.log(hasGraduated); // Output: false</code></pre>
+
+        <h2>Symbol</h2>
+        <p>Symbol is a unique and immutable primitive value and may be used as the key of an object property.</p>
+        <pre><code>// Example of Symbol
+let symbol1 = Symbol("description");
+let symbol2 = Symbol("description");
+console.log(symbol1 === symbol2); // Output: false</code></pre>
+
+        <h2>Undefined</h2>
+        <p>A variable that has not been assigned a value has the value undefined.</p>
+        <pre><code>// Example of undefined
+let notAssigned;
+console.log(notAssigned); // Output: undefined</code></pre>
+
+        <h2>Object</h2>
+        <p>An object is a complex data type that allows you to store collections of data.</p>
+        <pre><code>// Example of an object
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    isStudent: true
+};
+console.log(person);
+console.log(person.firstName); // Output: John</code></pre>
+
+        <h2>Array</h2>
+        <p>An array is a special type of object used to store multiple values in a single variable.</p>
+        <pre><code>// Example of an array
+let colors = ["red", "green", "blue"];
+console.log(colors);
+console.log(colors[0]); // Output: red</code></pre>
+    </div>
+     <br><br><br>
+    <div class="container">
+        <h1>JavaScript Console Outputs</h1>
+        
+        <h2>Questions and Outputs:</h2>
+
+        <h3>console.log(10 + 10);</h3>
+        <pre><code>20</code></pre>
+
+        <h3>console.log(10 + "10");</h3>
+        <pre><code>1010</code></pre>
+
+        <h3>console.log(10 + +"10");</h3>
+        <pre><code>20</code></pre>
+
+        <h3>console.log(10+"10"+10);</h3>
+        <pre><code>101010</code></pre>
+
+        <h3>console.log(10+ +"10" + 10);</h3>
+        <pre><code>2010</code></pre>
+
+        <h3>console.log(10 - "2");</h3>
+        <pre><code>8</code></pre>
+
+        <h3>console.log(10 - "2" - "8");</h3>
+        <pre><code>0</code></pre>
+
+        <h3>console.log(10+"2" - "2");</h3>
+        <pre><code>82</code></pre>
+
+        <h3>console.log(10>9>8);</h3>
+        <pre><code>false</code></pre>
+
+        <h3>console.log(10 * "10");</h3>
+        <pre><code>100</code></pre>
+
+        <h3>console.log(100 / "100");</h3>
+        <pre><code>1</code></pre>
+
+        <h3>console.log(100/"0");</h3>
+        <pre><code>Infinity</code></pre>
+
+        <h3>console.log(100 + +"100" - "100" * "100");</h3>
+        <pre><code>-9900</code></pre>
+
+        <h3>console.log(1 == "1");</h3>
+        <pre><code>true</code></pre>
+
+        <h3>console.log(1 === "1");</h3>
+        <pre><code>false</code></pre>
+
+        <h3>console.log(1 == "one");</h3>
+        <pre><code>false</code></pre>
+
+        <h3>console.log(1 === "one");</h3>
+        <pre><code>false</code></pre>
+
+        <h3>console.log(1+true);</h3>
+        <pre><code>2</code></pre>
+
+        <h3>console.log(1 - true);</h3>
+        <pre><code>0</code></pre>
+
+        <h3>console.log(1 + true - false);</h3>
+        <pre><code>2</code></pre>
+
+        <h3>console.log("1" + true);</h3>
+        <pre><code>1true</code></pre>
+
+        <h3>console.log(+"1" + true);</h3>
+        <pre><code>2</code></pre>
+
+        <h3>console.log(undefined == undefined);</h3>
+        <pre><code>true</code></pre>
+
+        <h3>console.log(undefined === undefined);</h3>
+        <pre><code>true</code></pre>
+
+        <h3>console.log(null == null);</h3>
+        <pre><code>true</code></pre>
+
+        <h3>console.log(null === null);</h3>
+        <pre><code>true</code></pre>
+
+        <h3>console.log(undefined == null);</h3>
+        <pre><code>true</code></pre>
+
+        <h3>console.log(undefined === null);</h3>
+        <pre><code>false</code></pre>
+
+        <h3>console.log(2+NaN);</h3>
+        <pre><code>NaN</code></pre>
+
+        <h3>console.log("2"+NaN);</h3>
+        <pre><code>2NaN</code></pre>
+
+        <h3>console.log("2"+undefined);</h3>
+        <pre><code>2undefined</code></pre>
+
+        <h3>console.log(2+undefined);</h3>
+        <pre><code>NaN</code></pre>
+
+        <h3>console.log(typeof "123");</h3>
+        <pre><code>string</code></pre>
+
+        <h3>console.log(typeof 2);</h3>
+        <pre><code>number</code></pre>
+
+        <h3>console.log(typeof true);</h3>
+        <pre><code>boolean</code></pre>
+
+        <h3>console.log(typeof undefined);</h3>
+        <pre><code>undefined</code></pre>
+
+        <h3>console.log(typeof null);</h3>
+        <pre><code>object</code></pre>
+
+        <h3>console.log(typeof []);</h3>
+        <pre><code>object</code></pre>
+
+        <h3>console.log(typeof 1n);</h3>
+        <pre><code>bigint</code></pre>
+
+        <h3>console.log(typeof 1n+2n);</h3>
+        <pre><code>3n</code></pre>
+
+        <h3>console.log(typeof 1+2n);</h3>
+        <pre><code>1bigint</code></pre>
+
+        <h3>console.log(typeof 1/1n);</h3>
+        <pre><code>number</code></pre>
+    </div>
+</body>
+</html>

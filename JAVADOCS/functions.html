@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Functions Examples</h1>
+
+        <div class="example">
+            <h2>1. Named Function</h2>
+            <p><strong>Name:</strong> Named Function</p>
+            <p><strong>Definition:</strong> A named function is defined using the `function` keyword and can be called by its name.</p>
+            <pre><code>
+<strong>Syntax:</strong>
+function functionName(parameters) {
+    // Function body
+    return value; // Optional
+}
+
+<strong>Example:</strong>
+<script>
+// Named Function
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Calling the function
+console.log(greet('John')); // Output: Hello, John!
+console.log(greet('Jane')); // Output: Hello, Jane!
+</script>
+            </code></pre>
+        </div>
+
+        <div class="example">
+            <h2>2. Function with Arguments</h2>
+            <p><strong>Name:</strong> Function with Arguments</p>
+            <p><strong>Definition:</strong> A function that accepts parameters (arguments) which are passed during its invocation.</p>
+            <pre><code>
+<strong>Syntax:</strong>
+function functionName(parameter1, parameter2, ...) {
+    // Function body
+    return value; // Optional
+}
+
+<strong>Example:</strong>
+<script>
+// Function with arguments
+function add(num1, num2) {
+    return num1 + num2;
+}
+
+// Calling the function with arguments
+console.log(add(5, 3)); // Output: 8
+console.log(add(-1, 10)); // Output: 9
+</script>
+            </code></pre>
+        </div>
+
+        <div class="example">
+            <h2>3. Asynchronous Function</h2>
+            <p><strong>Name:</strong> Asynchronous Function</p>
+            <p><strong>Definition:</strong> An asynchronous function is defined using the `async` keyword and can use `await` within its body to handle asynchronous operations.</p>
+            <pre><code>
+<strong>Syntax:</strong>
+async function functionName() {
+    try {
+        let result = await asyncOperation();
+        return result;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+<strong>Example:</strong>
+<script>
+// Asynchronous Function
+async function fetchData() {
+    try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+// Calling the asynchronous function
+fetchData().then(data => console.log('Fetched data:', data));
+</script>
+            </code></pre>
+        </div>
+
+        <div class="example">
+            <h2>4. Immediately Invoked Function Expression (IIFE)</h2>
+            <p><strong>Name:</strong> Immediately Invoked Function Expression (IIFE)</p>
+            <p><strong>Definition:</strong> An IIFE is a function that is executed immediately after it's defined.</p>
+            <pre><code>
+<strong>Syntax:</strong>
+(function() {
+    // Function body
+})();
+
+<strong>Example:</strong>
+<script>
+// Immediately Invoked Function Expression (IIFE)
+(function() {
+    let message = 'Hello from inside the IIFE!';
+    console.log(message);
+})(); // Output: Hello from inside the IIFE!
+</script>
+            </code></pre>
+        </div>
+
+        <div class="example">
+            <h2>5. Callback Function</h2>
+            <p><strong>Name:</strong> Callback Function</p>
+            <p><strong>Definition:</strong> A callback function is a function passed as an argument to another function and is executed when a specific event occurs.</p>
+            <pre><code>
+<strong>Syntax:</strong>
+function functionName(callback) {
+    // Function body
+    callback();
+}
+
+<strong>Example:</strong>
+<script>
+// Callback Function
+function fetchData(url, callback) {
+    fetch(url)
+        .then(response => response.json())
+        .then(data => callback(data))
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+// Callback function to handle fetched data
+function handleData(data) {
+    console.log('Fetched data:', data);
+}
+
+// Using the fetchData function with callback
+fetchData('https://api.example.com/data', handleData);
+</script>
+            </code></pre>
+        </div>
+
+        <div class="example">
+            <h2>6. Arrow Function</h2>
+            <p><strong>Name:</strong> Arrow Function</p>
+            <p><strong>Definition:</strong> An arrow function is a concise way to write function expressions in JavaScript.</p>
+            <pre><code>
+<strong>Syntax:</strong>
+const functionName = (parameter1, parameter2, ...) => {
+    // Function body
+    return value; // Optional
+};
+
+<strong>Example:</strong>
+<script>
+// Arrow Function
+const square = num => num * num;
+
+// Calling the arrow function
+console.log(square(5)); // Output: 25
+console.log(square(8)); // Output: 64
+</script>
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Additional Examples</h2>
+
+        <div class="example">
+            <h3>1. Arithmetic Operations Function</h3>
+            <p><strong>Name:</strong> Arithmetic Operations Function</p>
+            <p><strong>Definition:</strong> A function that performs basic arithmetic operations (+, -, *, /).</p>
+            <pre><code>
+<strong>Syntax:</strong>
+function arithmetic(a, b) {
+    let result = "";
+    result += "Addition: " + (a + b) + "\n";
+    result += "Subtraction: " + (a - b) + "\n";
+    result += "Multiplication: " + (a * b) + "\n";
+    result += "Division: " + (a / b) + "\n";
+    return result;
+}
+
+<strong>Example:</strong>
+<script>
+// Function to perform arithmetic operations (+, -, *, /)
+function arithmetic(a, b) {
+    let result = "";
+    result += "Addition: " + (a + b) + "\n";
+    result += "Subtraction: " + (a - b) + "\n";
+    result += "Multiplication: " + (a * b) + "\n";
+    result += "Division: " + (a / b) + "\n";
+    return result;
+}
+
+// Output
+console.log(arithmetic(10, 30));
+// Addition: 40
+// Subtraction: -20
+// Multiplication: 300
+// Division: 0.3333333333333333
+</script>
+            </code></pre>
+        </div>
+
+        <div class="example">
+            <h3>2. Square Function</h3>
+            <p><strong>Name:</strong> Square Function</p>
+            <p><strong>Definition:</strong> A function that calculates the square of a number.</p>
+            <pre><code>
+<strong>Syntax:</strong>
+function square(x) {
+    return x * x;
+}
+
+<strong>Example:</strong>
+<script>
+// Function to calculate square value
+function square(x) {
+    return x * x;
+}
+
+// Output
+console.log(square(29)); // Output: 841
+console.log(square(15)); // Output: 225
+</script>
+            </code></pre>
+        </div>
+
+        <div class="example">
+            <h3>3. Maximum of Two Numbers Using Ternary Operator</h3>
+            <p><strong>Name:</strong> Maximum of Two Numbers Using Ternary Operator</p>
+            <p><strong>Definition:</strong> A function that finds the maximum of two numbers using the ternary operator.</p>
+            <pre><code>
+<strong>Syntax:</strong>
+function max(a, b) {
+    return (a > b) ? a : b;
+}
+
+<strong>Example:</strong>
+<script>
+// Function to find maximum of two numbers using ternary operator
+function max(a, b) {
+    return (a > b) ? a : b;
+}
+
+// Output
+console.log(max(30, 50)); // Output: 50
+</script>
+            </code></pre>
+        </div>
+
+    
+            <div class="example">
+                <h2>4. Calculate Total Interest Function</h2>
+                <p><strong>Name:</strong> Calculate Total Interest Function</p>
+                <p><strong>Definition:</strong> A function that computes the total interest based on the principal amount, rate of interest, and number of years.</p>
+                <pre><code>
+    <strong>Syntax:</strong>
+    function calculateInterest(amount, rate, years) {
+        let interest = (amount * rate * years) / 100;
+        return interest;
+    }
+    
+    <strong>Example:</strong>
+    <script>
+    // Function to calculate total interest
+    function calculateInterest(amount, rate, years) {
+        let interest = (amount * rate * years) / 100;
+        return interest;
+    }
+    
+    // Example usage
+    let principal = 1500;
+    let interestRate = 3.5;
+    let timePeriod = 2;
+    
+    console.log(calculateInterest(principal, interestRate, timePeriod)); // Output: 105.0
+    </script>
+                </code></pre>
+            </div>
+    
+        
+</div>

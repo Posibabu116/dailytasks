@@ -1,0 +1,39 @@
+**
+
+TRANSFORMATIONS
+
+-- Translate == change the position of the element
+
+-- rotate  == rotates the element clockwise or anti-clockwise
+
+-- scale == modifies length of an element
+
+-- skew  == it twists the element diagnolly
+
+
++++ perspective
+
+
+**
+
+TRANSITIONS
+
+
+-transition
+
+-transition-delay
+
+-transition-duration
+
+-transition-property
+
+-transition-timing-function
+
+
+:target 
+
+:checked
+
+bookmarks
+
+***

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variable Declarations: var, let, and const</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        code {
+            background: #eef;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #eef;
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Variable Declarations</h1>
+        <h2>Differences between <code>var</code>, <code>let</code>, and <code>const</code></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>var</th>
+                    <th>let</th>
+                    <th>const</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Scope</td>
+                    <td>Function</td>
+                    <td>Block</td>
+                    <td>Block</td>
+                </tr>
+                <tr>
+                    <td>Hoisting</td>
+                    <td>Yes, initialized with <code>undefined</code></td>
+                    <td>Yes, but not initialized</td>
+                    <td>Yes, but not initialized</td>
+                </tr>
+                <tr>
+                    <td>Reassignment</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Redeclaration</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>var</h2>
+        <p>The <code>var</code> keyword is used to declare a variable in JavaScript. It has function scope, which means that the variable is only accessible within the function it is declared in. If declared outside any function, it has global scope.</p>
+        <pre><code>var x = 10;
+function testVar() {
+    var y = 20;
+    console.log(x); // 10
+    console.log(y); // 20
+}
+testVar();
+console.log(y); // ReferenceError: y is not defined</code></pre>
+
+        <h2>let</h2>
+        <p>The <code>let</code> keyword is used to declare a variable with block scope. This means that the variable is only accessible within the block (e.g., a pair of curly braces) it is declared in.</p>
+        <pre><code>let a = 30;
+if (true) {
+    let b = 40;
+    console.log(a); // 30
+    console.log(b); // 40
+}
+console.log(b); // ReferenceError: b is not defined</code></pre>
+
+        <h2>const</h2>
+        <p>The <code>const</code> keyword is used to declare a constant variable with block scope. This variable cannot be reassigned, although the contents of objects and arrays can still be modified.</p>
+        <pre><code>const c = 50;
+if (true) {
+    const d = 60;
+    console.log(c); // 50
+    console.log(d); // 60
+}
+console.log(d); // ReferenceError: d is not defined
+
+// Const with objects
+const obj = { name: "John" };
+obj.name = "Jane"; // This is allowed
+console.log(obj.name); // "Jane"
+
+// Const with arrays
+const arr = [1, 2, 3];
+arr.push(4); // This is allowed
+console.log(arr); // [1, 2, 3, 4]</code></pre>
+    </div>
+</body>
+</html>

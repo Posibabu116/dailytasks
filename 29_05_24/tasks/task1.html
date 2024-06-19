@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAN</title>
+    <style>
+        main {
+            width: 80vh;
+            height: 80vh;
+            background-color: beige;
+            position: relative;
+        }
+
+        section {
+            width: 10vh;
+            height: 10vh;
+            border-radius: 10vh;
+            background-color: gold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .fl1, .fl2, .fl3 {
+            width: 20vh;
+            height: 5vh;
+            background-color: rgb(249, 16, 16);
+            border-radius: 5vh 2vh 5vh 2vh;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .fl1 {
+            transform: rotate(70deg);
+            right: 0vh;
+            bottom: 14vh;
+        }
+
+        .fl2 {
+            transform: rotate(180deg);
+            left: 8vh;
+            bottom: 2vh;
+        }
+
+        .fl3 {
+            transform: rotate(120deg);
+            right: 2vh;
+            top: 13vh;
+        }
+
+        .rotate {
+            transition: transform 1s linear infinite;
+        }
+       .speeds1:checked ~ main section {
+            animation: spin 5s linear infinite;
+        }
+        .speeds2:checked ~ main section {
+            animation: spin 3s linear infinite;
+        }
+        .speeds3:checked ~ main section {
+            animation: spin 1s linear infinite;
+        }
+        .speeds4:checked ~ main section {
+            animation: none;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        } 
+    </style>
+</head>
+<body>
+    <input class="speeds1" type="radio" name="speed" id="speed1" checked>
+    <label for="speed1">Speed 1</label>
+    <input class="speeds2" type="radio" name="speed" id="speed2">
+    <label for="speed2">Speed 2</label>
+    <input class="speeds3" type="radio" name="speed" id="speed3">
+    <label for="speed3">Speed 3</label>
+    <input class="speeds4" type="radio" name="speed" id="off">
+    <label for="off">Off</label>
+
+    <main>
+        <section class="fan" style="z-index: 5; text-align: center;"><h4 style="margin-top: 40%;">TDP</h4></section>
+        <section class="fan">
+            <div class="fl1"></div>
+            <div class="fl2"></div>
+            <div class="fl3"></div>
+        </section>
+    </main>
+</body>
+</html>

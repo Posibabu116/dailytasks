@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional Statements and For Loops Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      margin-top: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .question {
+      margin-top: 10px;
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .code {
+      background: #f0f0f0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    .output {
+      margin-top: 5px;
+      padding: 5px;
+      background: #e1e1e1;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .explanation {
+      margin-top: 5px;
+      padding: 5px;
+      background: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Conditional Statements and For Loops Examples</h1>
+
+  <div class="question">
+    <h2>Conditional Statements:</h2>
+
+    <h2>QUESTIONS</h2>
+    <pre>
+        Work on all these qsns everyone:
+
+Conditional Statements:
+<hr>
+1. What will be the output of this code:
+if (5 > 10) {
+  console.log('5 is greater than 10');
+} else {
+  console.log('5 is less than or equal to 10');
+}
+<hr>
+2. What will be the output of this code:
+
+if (NaN === NaN) {
+  console.log('NaN is equal to NaN');
+} else {
+  console.log('NaN is not equal to NaN');
+}
+<hr>
+3. What will be the output of this code:
+
+if (!null) {
+  console.log('null is truthy');
+} else {
+  console.log('null is falsy');
+}
+<hr>
+4. What will be the output of this code:
+
+if (0 === '') {
+  console.log('0 is equal to empty string');
+} else {
+  console.log('0 is not equal to empty string');
+}
+<hr>
+5. What will be the output of this code:
+
+if (true && false) {
+  console.log('true and false is true');
+} else {
+  console.log('true and false is false');
+}
+<hr>
+6. What will be the output of this code:
+
+if (false || true) {
+  console.log('false or true is true');
+} else {
+  console.log('false or true is false');
+}
+<hr>
+7. What will be the output of this code:
+if (!false && true) {
+  console.log('not false and true is true');
+} else {
+  console.log('not false and true is false');
+}
+<hr>
+8. What will be the output of this code:
+if (5 === '5') {
+  console.log('5 is equal to string 5');
+} else {
+  console.log('5 is not equal to string 5');
+}
+<hr>
+9. What will be the output of this code:
+
+if (undefined == null) {
+  console.log('undefined is equal to null');
+} else {
+  console.log('undefined is not equal to null');
+}
+<hr>
+
+10. What will be the output of this code:
+
+if (typeof [] === 'object') {
+  console.log('Array is an object');
+} else {
+  console.log('Array is not an object');
+}
+<hr>
+
+    </pre>
+
+    <div class="question">
+      <h3>Question 1:</h3>
+      <div class="code">
+        if (5 > 10) { <br>
+        &nbsp;&nbsp; console.log('5 is greater than 10'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('5 is less than or equal to 10'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: 5 is less than or equal to 10
+      </div>
+      <div class="explanation">
+        Explanation: The condition 5 > 10 is false, so the else block is executed.
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>Question 2:</h3>
+      <div class="code">
+        if (NaN === NaN) { <br>
+        &nbsp;&nbsp; console.log('NaN is equal to NaN'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('NaN is not equal to NaN'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: NaN is not equal to NaN
+      </div>
+      <div class="explanation">
+        Explanation: In JavaScript, NaN is not equal to NaN. This is due to the IEEE 754 standard for floating point numbers.
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>Question 3:</h3>
+      <div class="code">
+        if (!null) { <br>
+        &nbsp;&nbsp; console.log('null is truthy'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('null is falsy'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: null is falsy
+      </div>
+      <div class="explanation">
+        Explanation: null is considered falsy in JavaScript. The expression !null evaluates to true.
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>Question 4:</h3>
+      <div class="code">
+        if (0 === '') { <br>
+        &nbsp;&nbsp; console.log('0 is equal to empty string'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('0 is not equal to empty string'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: 0 is not equal to empty string
+      </div>
+      <div class="explanation">
+        Explanation: 0 (number) and '' (empty string) are of different types and thus not equal in JavaScript.
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>Question 5:</h3>
+      <div class="code">
+        if (true && false) { <br>
+        &nbsp;&nbsp; console.log('true and false is true'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('true and false is false'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: true and false is false
+      </div>
+      <div class="explanation">
+        Explanation: The expression true && false results in false because both operands must be true for the && (AND) operator to return true.
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>Question 6:</h3>
+      <div class="code">
+        if (false || true) { <br>
+        &nbsp;&nbsp; console.log('false or true is true'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('false or true is false'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: false or true is true
+      </div>
+      <div class="explanation">
+        Explanation: The expression false || true results in true because the || (OR) operator returns true if at least one operand is true.
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>Question 7:</h3>
+      <div class="code">
+        if (!false && true) { <br>
+        &nbsp;&nbsp; console.log('not false and true is true'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('not false and true is false'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: not false and true is true
+      </div>
+      <div class="explanation">
+        Explanation: !false evaluates to true (since ! negates the falsy value false), and true && true results in true.
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>Question 8:</h3>
+      <div class="code">
+        if (5 === '5') { <br>
+        &nbsp;&nbsp; console.log('5 is equal to string 5'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('5 is not equal to string 5'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: 5 is not equal to string 5
+      </div>
+      <div class="explanation">
+        Explanation: 5 (number) and '5' (string) are of different types in JavaScript, so they are not equal.
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>Question 9:</h3>
+      <div class="code">
+        if (undefined == null) { <br>
+        &nbsp;&nbsp; console.log('undefined is equal to null'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('undefined is not equal to null'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: undefined is equal to null
+      </div>
+      <div class="explanation">
+        Explanation: undefined loosely equals null in JavaScript (using ==), although their types are different.
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>Question 10:</h3>
+      <div class="code">
+        if (typeof [] === 'object') { <br>
+        &nbsp;&nbsp; console.log('Array is an object'); <br>
+        } else { <br>
+        &nbsp;&nbsp; console.log('Array is not an object'); <br>
+        } <br>
+      </div>
+      <div class="output">
+        Output: Array is an object
+      </div>
+      <div class="explanation">
+        Explanation: In JavaScript, arrays are of type object.
+      </div>
+    </div>
+
+  </div>
+
+  <br><br><br>
+
+
+
+<h1>For Loop Examples</h1>
+
+<h2>Question Code and Output:</h2>
+
+<h3>1. Output of this code:</h3>
+<pre><code>
+for (var i = 0; i &lt; 5; i++) {
+  console.log(i);
+}
+</code></pre>
+<pre>
+0
+1
+2
+3
+4
+</pre>
+
+<h3>2. Output of this code:</h3>
+<pre><code>
+for (var i = 0; i &lt; 5; i += 2) {
+  console.log(i);
+}
+</code></pre>
+<pre>
+0
+2
+4
+</pre>
+
+<h3>3. Output of this code:</h3>
+<pre><code>
+for (var i = 5; i &gt;= 0; i--) {
+  console.log(i);
+}
+</code></pre>
+<pre>
+5
+4
+3
+2
+1
+0
+</pre>
+
+<h3>4. Output of this code:</h3>
+<pre><code>
+for (var i = 0; i &lt; 5; i += 3) {
+  console.log(i);
+}
+</code></pre>
+<pre>
+0
+3
+</pre>
+
+<h3>5. Output of this code:</h3>
+<pre><code>
+for (var i = 0; i &gt; 5; i++) {
+  console.log(i);
+}
+</code></pre>
+<pre>
+(no output because the condition i &gt; 5 is false initially)
+</pre>
+
+<h3>6. Output of this code:</h3>
+<pre><code>
+for (var i = 5; i &lt;= 0; i--) {
+  console.log(i);
+}
+</code></pre>
+<pre>
+(no output because the condition i &lt;= 0 is false initially)
+</pre>
+
+<h3>7. Output of this code:</h3>
+<pre><code>
+for (var i = 0; i &lt; 10; i += 4) {
+  console.log(i);
+}
+</code></pre>
+<pre>
+0
+4
+8
+</pre>
+
+<h3>8. Output of this code:</h3>
+<pre><code>
+for (var i = 0; i &lt; 5; i++) {
+  if (i === 3) break;
+  console.log(i);
+}
+</code></pre>
+<pre>
+0
+1
+2
+</pre>
+
+<h3>9. Output of this code:</h3>
+<pre><code>
+for (var i = 0; i &lt; 5; i++) {
+  if (i === 2) continue;
+  console.log(i);
+}
+</code></pre>
+<pre>
+0
+1
+3
+4
+</pre>
+
+<h3>10. Output of this code:</h3>
+<pre><code>
+for (var i = 0; i &lt; 5; i++) {
+  if (i === 1) return;
+  console.log(i);
+}
+</code></pre>
+<pre>
+(no output because the return statement terminates the function early)
+</pre>
+
+</div>
+</body>
+</html>
+
+
+ 

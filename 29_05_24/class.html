@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSFORMATIONS</title>
+    <style>
+        section{
+         
+            width: 30vh;
+            height: 30vh;
+            background-color: aqua;
+            /* transform: translate(80%,40%); */
+            /* transform: rotate(45deg); */
+            /* transform: scale(2); */
+            /* transform: skew(50deg); */
+        }
+        div{
+            transform: translate(80%,10%);
+            width: 80vh;
+            height: 80vh;
+            background-color: rgb(224, 243, 20);
+            perspective: 10px;
+        }
+        .btn1{
+            padding: 2vh;
+            background-color: red;
+        }
+        .btn2{
+            padding: 2vh;
+        }
+        .btn3{
+            padding: 2vh;
+        }
+        .btn4{
+            padding: 2vh;
+        }
+        .btn1:active~div section{
+            transform: translate(50%, 50%);
+        }
+        .btn2:active~div section{
+            transform: rotate(75deg);
+        }
+        .btn3:active~div section{
+            transform: skew(20deg);
+            
+        }
+       .btn4:hover~div section{
+            transform: scale(2);
+        }
+
+      
+
+    </style>
+</head>
+<body>
+  
+    <button class="btn1">Translate</button>
+    <button class="btn2">Rotate</button>
+    <button class="btn3">skew</button>
+    <button class="btn4">scale</button>
+  
+
+    <div>
+        <section></section>
+    </div>
+
+   
+
+    
+    
+</body>
+</html>
