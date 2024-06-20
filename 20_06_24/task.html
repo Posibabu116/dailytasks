@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Code Examples</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+  
+  .code {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+  }
+  
+  .output {
+    font-weight: bold;
+    color: blue;
+  }
+</style>
+</head>
+<body>
+
+<div class="section">
+  <h2>Print before letters of every character using ASCII values</h2>
+  <div class="code">
+    let inputString = "hello";<br>
+    let result = "";<br><br>
+    
+    for (let i = 0; i &lt; inputString.length; i++) &#123;<br>
+    &nbsp; let currentChar = inputString[i];<br>
+    &nbsp; let previousChar = String.fromCharCode(currentChar.charCodeAt(0) - 1);<br>
+    &nbsp; result += previousChar;<br>
+    &#125;<br><br>
+    
+    console.log(result);<br>
+  </div>
+  <div class="output">
+    &lt; Result: gdkkn &gt;
+  </div>
+</div>
+
+<div class="section">
+  <h2>Remove spaces between a sentence</h2>
+  <div class="code">
+    let sentence = "p o s i";<br>
+    let res = "";<br><br>
+    
+    for (let i = 0; i &lt; sentence.length; i++) &#123;<br>
+    &nbsp; if (sentence[i] !== ' ') &#123;<br>
+    &nbsp; &nbsp; res += sentence[i];<br>
+    &nbsp; &#125;<br>
+    &#125;<br><br>
+    
+    console.log(res);<br>
+  </div>
+  <div class="output">
+    &lt; Result: posi &gt;
+  </div>
+</div>
+
+<div class="section">
+  <h2>Reverse a word without using methods</h2>
+  <div class="code">
+    let word = "hello";<br>
+    let reversed = "";<br><br>
+    
+    for (let i = word.length - 1; i >= 0; i--) &#123;<br>
+    &nbsp; reversed += word[i];<br>
+    &#125;<br><br>
+    
+    console.log(reversed);<br>
+  </div>
+  <div class="output">
+    &lt; Result: olleh &gt;
+  </div>
+</div>
+
+</body>
+</html>
