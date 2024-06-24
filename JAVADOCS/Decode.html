@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Array Methods</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .question {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      .code, .output {
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 20px;
+        white-space: pre-wrap;
+      }
+      .output {
+        background-color: #e7f3fe;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Array Methods</h1>
+
+    <div class="section">
+      <div class="question">
+        Question 1: Write a function to get the length of an array without using the length property.
+      </div>
+      <div class="code">
+        &lt;script&gt;
+        debugger;
+        const names = ["posi", "babu", "ram", "krishna"];
+        function getArrayLength(array) {
+          let length = 0;
+          while (array[length] !== undefined) {
+            length++;
+          }
+          return length;
+        }
+        const nameslength = getArrayLength(names);
+        console.log(nameslength); 
+        &lt;/script&gt;
+      </div>
+      <div class="output">
+        Output:<br>
+        4
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="question">
+        Question 2: Implement a custom push function to add elements to an array.
+      </div>
+      <div class="code">
+        &lt;script&gt;
+        let users = ["posi", "babu"];
+        function push(array, ...elements) {
+          let initialLength = array.length;
+          let numberOfElements = elements.length;
+          for (let i = 0; i < numberOfElements; i++) {
+            array[initialLength + i] = elements[i];
+          }
+          return initialLength + numberOfElements;
+        }
+        let newLength = push(users, "uglyboy", "116");
+        console.log(users);    
+        console.log(newLength);  
+        &lt;/script&gt;
+      </div>
+      <div class="output">
+        Output:<br>
+        ["posi", "babu", "uglyboy", "116"]<br>
+        4
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="question">
+        Question 3: Implement a custom pop function to remove the last element from an array.
+      </div>
+      <div class="code">
+        &lt;script&gt;
+        let users1 = ["posi", "babu"];
+        function pop(array) {
+          let length = array.length;
+          if (length === 0) {
+            return undefined;
+          }
+          let lastElement = array[length - 1];
+          array.length = length - 1;
+          return lastElement;
+        }
+        let removedElement = pop(users1);
+        console.log(users1);          
+        console.log(removedElement); 
+        &lt;/script&gt;
+      </div>
+      <div class="output">
+        Output:<br>
+        ["posi"]<br>
+        babu
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="question">
+        Question 4: Implement a custom shift function to remove the first element from an array.
+      </div>
+      <div class="code">
+        &lt;script&gt;
+        let users2 = ["posi", "babu", "uglyboy", "116"];
+        function shift(array) {
+          let length = array.length;
+          if (length === 0) {
+            return undefined;
+          }
+          let firstElement = array[0];
+          for (let i = 1; i < length; i++) {
+            array[i - 1] = array[i];
+          }
+          array.length = length - 1;
+          return firstElement;
+        }
+        let removeElement = shift(users2);
+        console.log(users2);         
+        console.log(removeElement); 
+        &lt;/script&gt;
+      </div>
+      <div class="output">
+        Output:<br>
+        ["babu", "uglyboy", "116"]<br>
+        posi
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="question">
+        Question 5: Implement a custom unshift function to add elements to the beginning of an array.
+      </div>
+      <div class="code">
+        &lt;script&gt;
+        let users3 = ["posi", "babu"];
+        function unshift(array, ...elements) {
+          let numberOfElements = elements.length;
+          let originalLength = array.length;
+          for (let i = originalLength - 1; i >= 0; i--) {
+            array[i + numberOfElements] = array[i];
+          }
+          for (let i = 0; i < numberOfElements; i++) {
+            array[i] = elements[i];
+          }
+          return array.length;
+        }
+        let neLength = unshift(users3, "uglyboy", "116");
+        console.log(users3);   
+        console.log(neLength); 
+        &lt;/script&gt;
+      </div>
+      <div class="output">
+        Output:<br>
+        ["uglyboy", "116", "posi", "babu"]<br>
+        4
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="question">
+        Question 6: Implement a custom join function to join array elements into a string with a given separator.
+      </div>
+      <div class="code">
+        &lt;script&gt;
+        let users4 = ["posi", "babu", "uglyboy", "116"];
+        function join(array, separator = ',') {
+          let result = '';
+          for (let i = 0; i < array.length; i++) {
+            result += array[i];
+            if (i < array.length - 1) {
+              result += separator;
+            }
+          }
+          return result;
+        }
+        let joinedString = join(users4, ' - ');
+        console.log(joinedString);  
+        &lt;/script&gt;
+      </div>
+      <div class="output">
+        Output:<br>
+        posi - babu - uglyboy - 116
+      </div>
+    </div>
+    
+  </body>
+</html>
