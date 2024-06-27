@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        div {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h2>Output Examples:</h2>
+    <hr />
+
+    <div>
+        <h3>Example 1:</h3>
+        <pre>
+var x = 10;
+function foo() {
+  console.log(x);
+}
+foo();
+
+        </pre>
+        <p>Output: <strong>10</strong></p>
+    </div>
+
+    <div>
+        <h3>Example 2:</h3>
+        <pre>
+var x = 10;
+function foo() {
+  var x = 20;
+  console.log(x);
+}
+foo();
+        </pre>
+        <p>Output: <strong>20</strong></p>
+    </div>
+
+    <div>
+        <h3>Example 3:</h3>
+        <pre>
+var x = 10;
+function foo() {
+  console.log(x);
+  var x = 20;
+}
+foo();
+        </pre>
+        <p>Output: <strong>undefined</strong></p>
+    </div>
+
+    <div>
+        <h3>Example 4:</h3>
+        <pre>
+var x = 10;
+function foo() {
+  console.log(x);
+}
+var x = 20;
+foo();
+        </pre>
+        <p>Output: <strong>20</strong></p>
+    </div>
+
+    <div>
+        <h3>Example 5:</h3>
+        <pre>
+function foo() {
+  console.log(x);
+}
+var x = 10;
+foo();
+        </pre>
+        <p>Output: <strong>10</strong></p>
+    </div>
+
+    <div>
+        <h3>Example 6:</h3>
+        <pre>
+function foo() {
+  console.log(x);
+}
+foo();
+var x = 10;
+        </pre>
+        <p>Output: <strong>ReferenceError: Cannot access 'x' before initialization</strong></p>
+    </div>
+
+</div>
+
+</body>
+</html>
