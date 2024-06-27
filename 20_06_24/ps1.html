@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterating Over Objects in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .code, .output {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            white-space: pre-wrap; /* Preserve whitespace */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Iterating Over Objects in JavaScript</h1>
+
+<h2>Question 1: Iterate over an object using for-in loop to display keys</h2>
+<div class="code">
+    <code>
+        let person = {
+            "firstName": "Alice",
+            "lastName": "Johnson",
+            "occupation": "Engineer"
+        };
+
+        for (let key in person) {
+            console.log(key);
+        }
+    </code>
+</div>
+<div class="output" id="for-in-keys-output"></div>
+
+<h2>Question 2: Iterate over an object using for-in loop to display values</h2>
+<div class="code">
+    <code>
+        let person = {
+            "firstName": "Alice",
+            "lastName": "Johnson",
+            "occupation": "Engineer"
+        };
+
+        for (let key in person) {
+            console.log(person[key]);
+        }
+    </code>
+</div>
+<div class="output" id="for-in-values-output"></div>
+
+<h2>Question 3: Iterate over an object using for-in loop to display both keys and values</h2>
+<div class="code">
+    <code>
+        let person = {
+            "firstName": "Alice",
+            "lastName": "Johnson",
+            "occupation": "Engineer"
+        };
+
+        for (let key in person) {
+            console.log(key + " : " + person[key]);
+        }
+    </code>
+</div>
+<div class="output" id="for-in-both-output"></div>
+
+<h2>Question 4: Iterate over an object using for-of loop to display keys</h2>
+<div class="code">
+    <code>
+        let employee = {
+            "empId": "E123",
+            "empName": "Bob Smith",
+            "department": "HR"
+        };
+
+        for (let [key] of Object.entries(employee)) {
+            console.log(key);
+        }
+    </code>
+</div>
+<div class="output" id="for-of-keys-output"></div>
+
+<h2>Question 5: Iterate over an object using for-of loop to display both keys and values</h2>
+<div class="code">
+    <code>
+        let employee = {
+            "empId": "E123",
+            "empName": "Bob Smith",
+            "department": "HR"
+        };
+
+        for (let [key, value] of Object.entries(employee)) {
+            console.log(key + " : " + value);
+        }
+    </code>
+</div>
+<div class="output" id="for-of-both-output"></div>
+
+<script>
+    // Question 1: for-in loop to display keys
+    let person = {
+        "firstName": "Alice",
+        "lastName": "Johnson",
+        "occupation": "Engineer"
+    };
+
+    let forInKeysOutput = document.getElementById('for-in-keys-output');
+    for (let key in person) {
+        forInKeysOutput.innerHTML += key + '<br>';
+    }
+
+    // Question 2: for-in loop to display values
+    let forInValuesOutput = document.getElementById('for-in-values-output');
+    for (let key in person) {
+        forInValuesOutput.innerHTML += person[key] + '<br>';
+    }
+
+    // Question 3: for-in loop to display both keys and values
+    let forInBothOutput = document.getElementById('for-in-both-output');
+    for (let key in person) {
+        forInBothOutput.innerHTML += key + ' : ' + person[key] + '<br>';
+    }
+
+    // Question 4: for-of loop to display keys
+    let employee = {
+        "empId": "E123",
+        "empName": "Bob Smith",
+        "department": "HR"
+    };
+
+    let forOfKeysOutput = document.getElementById('for-of-keys-output');
+    for (let [key] of Object.entries(employee)) {
+        forOfKeysOutput.innerHTML += key + '<br>';
+    }
+
+    // Question 5: for-of loop to display both keys and values
+    let forOfBothOutput = document.getElementById('for-of-both-output');
+    for (let [key, value] of Object.entries(employee)) {
+        forOfBothOutput.innerHTML += key + ' : ' + value + '<br>';
+    }
+</script>
+
+</body>
+</html>

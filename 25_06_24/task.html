@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array of Objects Functions</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    h2 {
+        margin-top: 30px;
+    }
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+    code {
+        font-size: 16px;
+        color: #333;
+    }
+    .output {
+        margin-top: 10px;
+        background-color: #e3f2fd;
+        padding: 10px;
+        border-left: 5px solid #2196F3;
+    }
+</style>
+</head>
+<body>
+    <h1>Array of Objects Functions</h1>
+
+    <h2>Function 1: getKeysArray(arrayOfObjects)</h2>
+    <pre><code>// Returns an array of keys of each object in the input array.
+function getKeysArray(arrayOfObjects) {
+    let keysArray = [];
+    for (let obj of arrayOfObjects) {
+        let keys = [];
+        for (let key in obj) {
+            keys.push(key);
+        }
+        keysArray.push(keys);
+    }
+    return keysArray;
+}
+
+let input1 = [{ a: 1, b: 2 }, { c: 3, d: 4 }, { e: 5, f: 6 }];
+console.log(getKeysArray(input1));</code></pre>
+    <div class="output">
+        Output:
+        <pre>[["a", "b"], ["c", "d"], ["e", "f"]]</pre>
+    </div>
+
+    <h2>Function 2: getValuesArray(arrayOfObjects)</h2>
+    <pre><code>// Returns an array of values of each object in the input array.
+function getValuesArray(arrayOfObjects) {
+    let valuesArray = [];
+    for (let obj of arrayOfObjects) {
+        let values = [];
+        for (let key in obj) {
+            values.push(obj[key]);
+        }
+        valuesArray.push(values);
+    }
+    return valuesArray;
+}
+
+let input2 = [{ a: 1, b: 2 }, { c: 3, d: 4 }, { e: 5, f: 6 }];
+console.log(getValuesArray(input2));</code></pre>
+    <div class="output">
+        Output:
+        <pre>[[1, 2], [3, 4], [5, 6]]</pre>
+    </div>
+
+    <h2>Function 3: filterObjectsByProperty(arrayOfObjects, property)</h2>
+    <pre><code>// Returns an array of objects that have a specific property.
+function filterObjectsByProperty(arrayOfObjects, property) {
+    let filteredArray = [];
+    for (let obj of arrayOfObjects) {
+        if (obj.hasOwnProperty(property)) {
+            filteredArray.push(obj);
+        }
+    }
+    return filteredArray;
+}
+
+let input3 = [{ a: 1 }, { b: 2 }, { a: 3, b: 4 }];
+console.log(filterObjectsByProperty(input3, 'a'));</code></pre>
+    <div class="output">
+        Output:
+        <pre>[{ a: 1 }, { a: 3, b: 4 }]</pre>
+    </div>
+
+    <h2>Function 4: sortObjectsByProperty(arrayOfObjects, property)</h2>
+    <pre><code>// Returns an array of objects sorted by a specific property.
+function sortObjectsByProperty(arrayOfObjects, property) {
+    arrayOfObjects.sort((a, b) => a[property] - b[property]);
+    return arrayOfObjects;
+}
+
+let input4 = [{ a: 2 }, { a: 1 }, { a: 3 }];
+console.log(sortObjectsByProperty(input4, 'a'));</code></pre>
+    <div class="output">
+        Output:
+        <pre>[{ a: 1 }, { a: 2 }, { a: 3 }]</pre>
+    </div>
+
+    <h2>Function 5: mergeObjectsProperties(arrayOfObjects)</h2>
+    <pre><code>// Returns an object with properties from all objects in the input array.
+function mergeObjectsProperties(arrayOfObjects) {
+    let mergedObject = {};
+    for (let obj of arrayOfObjects) {
+        for (let key in obj) {
+            mergedObject[key] = obj[key];
+        }
+    }
+    return mergedObject;
+}
+
+let input5 = [{ a: 1 }, { b: 2 }, { c: 3 }];
+console.log(mergeObjectsProperties(input5));</code></pre>
+    <div class="output">
+        Output:
+        <pre>{ a: 1, b: 2, c: 3 }</pre>
+    </div>
+
+</body>
+</html>
