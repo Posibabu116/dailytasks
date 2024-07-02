@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Study</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            color: #c7254e;
+            background: #f9f2f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Study</h1>
+        
+        <h2>1. How <code>isNaN</code> Works in Different Scenarios</h2>
+        <p>The <code>isNaN</code> function determines whether a value is NaN (Not-a-Number). It returns true if the value is NaN, and false otherwise.</p>
+        <pre><code>// Examples of isNaN
+isNaN(NaN);        // true
+isNaN(123);        // false
+isNaN('123');      // false
+isNaN('Hello');    // true
+isNaN(undefined);  // true
+isNaN(null);       // false
+isNaN(true);       // false
+isNaN(false);      // false</code></pre>
+        <p>Note: <code>isNaN</code> coerces the value to a number before checking if it's NaN.</p>
+
+        <h2>2. Types of Coercion in JavaScript</h2>
+        <p>JavaScript uses two types of coercion:</p>
+        <ul>
+            <li><strong>Implicit Coercion:</strong> Automatically performed by JavaScript. It occurs in expressions involving different types.</li>
+            <li><strong>Explicit Coercion:</strong> Manually performed by the developer using functions or operators.</li>
+        </ul>
+        <h3>Implicit Coercion</h3>
+        <pre><code>// Examples of implicit coercion
+let result1 = '5' + 5;     // '55' (string)
+let result2 = '5' * 5;     // 25 (number)
+let result3 = '5' - 3;     // 2 (number)
+let result4 = 5 + true;    // 6 (number)
+let result5 = 5 + null;    // 5 (number)</code></pre>
+
+        <h3>Explicit Coercion</h3>
+        <pre><code>// Examples of explicit coercion
+let num = Number('5');    // 5 (number)
+let str = String(5);      // '5' (string)
+let bool = Boolean(1);    // true (boolean)</code></pre>
+
+        <h2>3. Program to Print a Random OTP Using Math Methods</h2>
+        <p>The following JavaScript program generates a random 4-digit OTP:</p>
+        <pre><code>// Function to generate a random 4-digit OTP
+function otpgen() {
+    var otp = 1000 + Math.floor(Math.random() * 9000);
+    console.log(otp);
+}
+
+// Generate and print the OTP
+otpgen();</code></pre>
+    </div>
+</body>
+</html>
