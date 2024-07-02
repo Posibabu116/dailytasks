@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>1) Display the Current Date and Time</h2>
+        <p>Function to display the current date and time in the format YYYY-MM-DD HH:MM:SS:</p>
+        <pre>
+function displayCurrentDateTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const formattedDateTime = \`\${year}-\${month}-\${day} \${hours}:\${minutes}:\${seconds}\`;
+    console.log(formattedDateTime);
+}
+
+displayCurrentDateTime();
+        </pre>
+
+        <h2>2) Calculate the Number of Days Between Two Dates</h2>
+        <p>Function to calculate the number of days between two dates:</p>
+        <pre>
+function daysBetweenDates(date1, date2) {
+    const oneDay = 24 * 60 * 60 * 1000; // Hours*Minutes*Seconds*Milliseconds
+    const firstDate = new Date(date1);
+    const secondDate = new Date(date2);
+    const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+    return diffDays;
+}
+
+console.log(daysBetweenDates('2024-01-01', '2024-12-31')); // Example usage
+        </pre>
+
+        <h2>3) Get the Day of the Week for a Given Date</h2>
+        <p>Function to get the day of the week for a given date:</p>
+        <pre>
+function getDayOfWeek(date) {
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const givenDate = new Date(date);
+    const dayOfWeek = givenDate.getDay();
+    return daysOfWeek[dayOfWeek];
+}
+
+console.log(getDayOfWeek('2024-07-02')); // Example usage
+        </pre>
+    </div>
+</body>
+</html>
